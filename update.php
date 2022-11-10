@@ -6,10 +6,11 @@
     $nombre = $_POST['nombre'];
     $apellidos = $_POST['apellidos'];
 
-    $sql = "UPDATE  alumnos SET ine='$ine', nombre='$nombre', apellidos='$apellidos'  WHERE cod_estudiante='$cod_estudiante'";
+    $sql = "UPDATE  alumnos SET ine='$ine', nombre='$nombre', apellidos='$apellidos'  
+    WHERE cod_estudiante='$cod_estudiante'";
     $query = mysqli_query($conn, $sql);
     if($query){
-        Header("Location: index.php ");
+        Header("Location: index.php");
     } else {
         echo $query;
     }
